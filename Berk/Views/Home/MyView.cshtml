@@ -1,0 +1,34 @@
+﻿@*
+    * Author: Ashley Johansson
+    * Date Created: 10/04/19 10:19 AM
+    * Date Updated: 10/06/19  4:18 PM
+    * The Index View Page (or Home Page) for the Berk Community
+    * where there are access links to the History, the 
+    * Message Board, and the Info View Pages.
+    * It will give some information about the community in order
+    * to draw users into the rest of the site.
+*@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Welcome to Berk</h2>
+    <p>
+        It's twelve days north of Hopeless, and a few degrees south of Freezing to Death;
+        located solidly on the Meridian of Misery.
+        @* TODO: Enter a better description of the community *@
+    </p>
+    <h3>Explore our <a asp-action="History">History</a>,</h3>
+    <h3>Or check out our <a asp-action="MessageBoard"> Message Board</a>.</h3>
+    <h3>If you want more information, check out this <a asp-action="Info">link</a>! </h3>
+</body>
+</html>
