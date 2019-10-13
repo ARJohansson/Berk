@@ -1,4 +1,5 @@
-﻿@*
+﻿@model List<Message>
+@*
     * Author: Ashley Johansson
     * Date Created: 10/12/19 6:43 PM
     * Date Updated: 10/12/19  6:45 PM
@@ -20,8 +21,7 @@
     @foreach (Message message in Model)
     {
         @message.Sender; <br />
-        @message.TimeStamp; <br />
-        @message.Message; <br />
+        @message.MessageText; <br />
         <br />
     }
     <br>

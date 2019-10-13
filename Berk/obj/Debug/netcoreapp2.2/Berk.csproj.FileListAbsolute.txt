@@ -103,3 +103,5 @@ C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\ob
 C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Berk.dll
 C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Berk.pdb
 C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Berk.csproj.CopyComplete
+C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Razor\Views\Home\ContactPage.g.cshtml.cs
+C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Razor\Views\Home\Messages.g.cshtml.cs

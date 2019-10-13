@@ -10,7 +10,7 @@ namespace Berk.Models
         public int CommunityID { get; set; }
         private List<Administrator> administrators = new List<Administrator>();
         private List<VIP> vips = new List<VIP>();
-        private List<Location> locations = new List<Locations>();
+        private List<Location> locations = new List<Location>();
         private List<History> histories = new List<History>();
 
         public string Name { get; set; }

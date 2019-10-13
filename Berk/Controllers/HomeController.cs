@@ -57,5 +57,17 @@ namespace Berk.Controllers
         {
             return View();
         }
+
+        // Returns the view from the ContactPage View
+        public ViewResult ContactPage()
+        {
+            return View();
+        }
+        
+        // Returns the view from the Messages View
+        public ViewResult Messages()
+        {
+            return View();
+        }
     }
 }
