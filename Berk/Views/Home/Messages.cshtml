@@ -1,0 +1,31 @@
+﻿@*
+    * Author: Ashley Johansson
+    * Date Created: 10/12/19 6:43 PM
+    * Date Updated: 10/12/19  6:45 PM
+    * A list of messages sent and received
+*@
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Messages</title>
+</head>
+<body>
+    List of Messages:
+    @foreach (Message message in Model)
+    {
+        @message.Sender; <br />
+        @message.TimeStamp; <br />
+        @message.Message; <br />
+        <br />
+    }
+    <br>
+    <a href="ContactPage">Add a new message</a><br />
+    <a href="Index">Home</a>
+</body>
+</html>

@@ -12080,11 +12080,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ashley Johansson\\Documents\\Lanecc\\CS295N\\Lab1\\Lab1Part2\\Berk\\Berk\\Berk.csproj",
+      "projectUniqueName": "C:\\Users\\Ashley Johansson\\Documents\\Lanecc\\CS295N\\BerkCommunityPage\\Berk\\Berk\\Berk.csproj",
       "projectName": "Berk",
-      "projectPath": "C:\\Users\\Ashley Johansson\\Documents\\Lanecc\\CS295N\\Lab1\\Lab1Part2\\Berk\\Berk\\Berk.csproj",
+      "projectPath": "C:\\Users\\Ashley Johansson\\Documents\\Lanecc\\CS295N\\BerkCommunityPage\\Berk\\Berk\\Berk.csproj",
       "packagesPath": "C:\\Users\\Ashley Johansson\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ashley Johansson\\Documents\\Lanecc\\CS295N\\Lab1\\Lab1Part2\\Berk\\Berk\\obj\\",
+      "outputPath": "C:\\Users\\Ashley Johansson\\Documents\\Lanecc\\CS295N\\BerkCommunityPage\\Berk\\Berk\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
