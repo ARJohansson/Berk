@@ -22,52 +22,78 @@ namespace Berk.Controllers
 {
     public class HomeController : Controller
     {
+        Message message;
+        public HomeController()
+        {
+            if (MessageRepository.Messages.Count == 0)
+            {
+                message = new Message()
+                {
+                    Sender = "Lisa Beau",
+                    MessageText = "Hi, is the repository working?"
+                };
+                MessageRepository.ContactPage(message);
+            }
+        }
+
         // Returns the view from the MyView View Page
-        public ViewResult Index()
+        public IActionResult Index()
         {
             return View("MyView");
         }
 
         // Returns the view from the History View Page
-        public ViewResult History()
+        public IActionResult History()
         {
             return View();
         }
         
         // Returns the view from the MessageBoard View Page
-        public ViewResult MessageBoard()
+        public IActionResult MessageBoard()
         {
             return View();
         }
 
         // Returns the view from the Info View Page
-        public ViewResult Info()
+        public IActionResult Info()
         {
             return View();
         }
         
         // Returns the view from the Locations View Page
-        public ViewResult Locations()
+        public IActionResult Locations()
         {
             return View();
         }
 
         // Returns the view from the VIP View Page
-        public ViewResult VIP()
+        public IActionResult VIP()
         {
             return View();
         }
 
         // Returns the view from the ContactPage View
-        public ViewResult ContactPage()
+        public IActionResult ContactPage()
         {
             return View();
         }
+
+        [HttpPost]
+        public RedirectToActionResult ContactPage(string sender, string messageText)
+        {
+            message = new Message();
+            message.Sender = sender;
+            message.MessageText = messageText;
+            MessageRepository.ContactPage(message);
+
+            return RedirectToAction("Messages");
+        }
         
         // Returns the view from the Messages View
-        public ViewResult Messages()
+        public IActionResult Messages()
         {
-            return View();
+            List<Message> messages = MessageRepository.Messages;
+            return View(messages);
         }
     }
 }

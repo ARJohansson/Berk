@@ -7,9 +7,8 @@ namespace Berk.Models
 {
     public class Message
     {
-        public int MessageID { get; set; }
-
-
+        //public int MessageID { get; set; }
+        
         public string Sender { get; set; }
         public string MessageText { get; set; }
         //public DateTime Sent { get; set; }

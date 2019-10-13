@@ -1,12 +1,11 @@
-﻿@model List<Message>
-@*
+﻿@*
     * Author: Ashley Johansson
     * Date Created: 10/12/19 6:43 PM
     * Date Updated: 10/12/19  6:45 PM
     * A list of messages sent and received
 *@
-
-@{ 
+@model List<Message>
+@{
     Layout = null;
 }
 
@@ -17,7 +16,7 @@
     <title>Messages</title>
 </head>
 <body>
-    List of Messages:
+    List of Messages: <br />
     @foreach (Message message in Model)
     {
         @message.Sender; <br />
