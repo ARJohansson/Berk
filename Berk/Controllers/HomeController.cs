@@ -30,7 +30,7 @@ namespace Berk.Controllers
                 message = new Message()
                 {
                     Sender = "Lisa Beau",
-                    MessageText = "Hi, is the repository working?"
+                    MessageText = "Welcome to Berk!"
                 };
                 MessageRepository.ContactPage(message);
             }
@@ -78,6 +78,7 @@ namespace Berk.Controllers
             return View();
         }
 
+        // Posts the message from the ContactPage form into the Message page
         [HttpPost]
         public RedirectToActionResult ContactPage(string sender, string messageText)
         {
