@@ -13,19 +13,19 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Messages</title>
+    <title>MessageAdmin</title>
 </head>
 <body>
-    List of Messages: <br />
+    List of Messages to Admins: <br />
     @foreach (Message message in Model)
     {
         @message.MemberName; <br />
         @message.MessageText; <br />
-        <a asp-action="ContactPage" asp-route-sent="@message.Sent">Reply</a> <br />
+        <a asp-action="MessageBoard" asp-route-sent="@message.Sent">Reply</a> <br />
         <br />
     }
     <br>
-    <a href="ContactPage">Add a new message</a><br />
-    <a href="/Home/Index">Home</a>
+    <a href="MessageBoard">Add a new message</a><br />
+    <a href="Index">Home</a>
 </body>
 </html>

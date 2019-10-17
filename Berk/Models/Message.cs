@@ -12,7 +12,7 @@ namespace Berk.Models
 
         // public string Sender { get; set; }
         public string MessageText { get; set; }
-        //public DateTime Sent { get; set; }
+        public DateTime Sent { get; set; }
         public string MemberName { get; set; }
         //public Administrator Admin { get; set; }
     }

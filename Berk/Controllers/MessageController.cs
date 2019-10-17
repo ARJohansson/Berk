@@ -12,7 +12,7 @@ namespace Berk.Controllers
     {
         Message message;
         Member member = new Member();
-        public MessageController()
+        /*public MessageController()
         {
             if (MessageRepository.Messages.Count == 0)
             {
@@ -24,29 +24,42 @@ namespace Berk.Controllers
                 };
                 MessageRepository.ContactPage(message);
             }
-        }
+        }*/
 
         // Returns the view from the Message Board this is
         // the Index for the MessageController
-        public IActionResult Index()
+        public IActionResult Index(DateTime sent)
         {
-            return View("MessageBoard");
+            return View("MessageBoard", sent);
+        }
+        
+        [HttpPost]
+        public RedirectToActionResult MessageBoard(string memberName, string messageText,
+                                                        DateTime sent)
+        {
+            message = new Message { Sent = sent };
+            message.MemberName = memberName;
+            message.MessageText = messageText;
+            MessageRepository.AddMessage(message);
+
+            return RedirectToAction("MessageAdmin");
         }
 
         // Returns the view from the ContactPage View
-        public IActionResult ContactPage()
+        public IActionResult ContactPage(DateTime sent)
         {
-            return View();
+            return View("ContactPage", sent);
         }
 
         // Posts the message from the ContactPage form into the Message page
         [HttpPost]
-        public RedirectToActionResult ContactPage(string memberName, string messageText)
+        public RedirectToActionResult ContactPage(string memberName, string messageText,
+                                                    DateTime sent)
         {
-            message = new Message();
+            message = new Message { Sent = sent };
             message.MemberName = memberName;
             message.MessageText = messageText;
-            MessageRepository.ContactPage(message);
+            MessageRepository.AddMessage(message);
 
             return RedirectToAction("Messages");
         }
@@ -55,6 +68,14 @@ namespace Berk.Controllers
         public IActionResult Messages()
         {
             List<Message> messages = MessageRepository.Messages;
+            messages.Sort((m1, m2) => DateTime.Compare(m1.Sent, m2.Sent));
+            return View(messages);
+        }
+
+        public IActionResult MessageAdmin()
+        {
+            List<Message> messages = MessageRepository.Messages;
+            messages.Sort((m1, m2) => DateTime.Compare(m1.Sent, m2.Sent));
             return View(messages);
         }
     }
