@@ -12,5 +12,6 @@ namespace Berk.Models
         public string Name { get; set; }
         public string Reason { get; set; }
         public DateTime dateOfBirth { get; set; }
+        public DateTime dateOfDeath { get; set; }
     }
 }

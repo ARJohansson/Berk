@@ -11,13 +11,15 @@ namespace Berk.Controllers
     public class MessageController : Controller
     {
         Message message;
+        Member member = new Member();
         public MessageController()
         {
             if (MessageRepository.Messages.Count == 0)
             {
+                member.Name = "Lisa Beau";
                 message = new Message()
                 {
-                    Sender = "Lisa Beau",
+                    MemberName = member.Name,
                     MessageText = "Welcome to Berk!"
                 };
                 MessageRepository.ContactPage(message);
@@ -39,10 +41,10 @@ namespace Berk.Controllers
 
         // Posts the message from the ContactPage form into the Message page
         [HttpPost]
-        public RedirectToActionResult ContactPage(string sender, string messageText)
+        public RedirectToActionResult ContactPage(string memberName, string messageText)
         {
             message = new Message();
-            message.Sender = sender;
+            message.MemberName = memberName;
             message.MessageText = messageText;
             MessageRepository.ContactPage(message);
 
