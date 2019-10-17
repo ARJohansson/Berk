@@ -28,14 +28,16 @@ namespace Berk.Controllers
         public IActionResult Locations()
         {
             List<Location> locations = LocationRepository.Locations;
-            locations.Sort((pl1,pl2) => string.Compare( pl1.Name, pl2.Name, StringComparison.Ordinal));
+            locations.Sort((pl1, pl2) => string.Compare( pl1.Name, pl2.Name, StringComparison.Ordinal));
             return View(locations);
         }
 
         // Returns the view from the VIP View Page
         public IActionResult VIP()
         {
-            return View();
+            List<VIP> people = PeopleRepository.VIPs;
+            people.Sort((vip1, vip2) => string.Compare(vip1.Name, vip2.Name, StringComparison.Ordinal));
+            return View(people);
         }
     }
 }

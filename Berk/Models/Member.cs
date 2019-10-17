@@ -12,7 +12,7 @@ namespace Berk.Models
         private List<Message> messages = new List<Message>();
         private List<String> oversees = new List<string>();
 
-        public bool IsAdmin { get; }
+        public bool IsAdmin { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public DateTime Joined { get; set; }

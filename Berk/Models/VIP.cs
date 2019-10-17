@@ -8,10 +8,12 @@ namespace Berk.Models
     public class VIP
     {
         public int VIPID { get; set; }
+        public string Alive = "alive";
+        public string Dead = "deceased";
 
         public string Name { get; set; }
         public string Reason { get; set; }
-        public DateTime dateOfBirth { get; set; }
-        public DateTime dateOfDeath { get; set; }
+        public string Link { get; set; }
+        public bool IsAlive { get; set; }
     }
 }

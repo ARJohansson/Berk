@@ -53,7 +53,7 @@ namespace Berk.Models
             {
                 Name = "Dragon Island",
                 Description = "Ever since vikings first settled on Berk they've been searching for the Dragons' Nest: Dragon Island. With " +
-                              "the help of Toothless Stoic the Vast was finally able to discover it and put an end to the Red Death's reign. " +
+                              "the help of Toothless Stoick the Vast was finally able to discover it and put an end to the Red Death's reign. " +
                               "These days the shores are a lot more pleasant, though you'll want to watch out for some of the more wild dragons.",
                 Link = "https://howtotrainyourdragon.fandom.com/wiki/Dragon_Island"
             };
