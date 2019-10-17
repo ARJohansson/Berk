@@ -20,7 +20,9 @@ namespace Berk.Controllers
         // Returns the view from the Locations View Page
         public IActionResult Locations()
         {
-            return View();
+            List<Location> locations = LocationRepository.Locations;
+            locations.Sort((pl1,pl2) => string.Compare( pl1.Name, pl2.Name, StringComparison.Ordinal));
+            return View(locations);
         }
 
         // Returns the view from the VIP View Page

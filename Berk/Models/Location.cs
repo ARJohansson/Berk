@@ -9,9 +9,11 @@ namespace Berk.Models
     {
         public int LocationID { get; set; }
         private List<Comment> comments = new List<Comment>();
+        //public string UriBuilder(string link) => link;
 
         public string Name { get; set; }
         public string Description { get; set; }
+        public string Link { get; set; }
 
         public List<Comment> Commments { get { return comments; } }
 

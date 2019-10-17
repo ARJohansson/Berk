@@ -6,25 +6,29 @@
     * including pictures and descriptions of each place
     * which detail the relevance of the listings.
 *@
-
+@model List<Location>
 @{
     Layout = null;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Info</title>
+    <title>Messages</title>
 </head>
 <body>
-    @* TODO: Add locations *@
-    <h2>
-        Coming Soon: A complete list of the best places to go on Berk.
-    </h2>
-    <p>Berk's Dragon Training Academy</p>
-    <p>Gobber the Belch's Blacksmithy and Dragon Dentistry</p>
-    <p>The Great Hall - eat with Dragons!</p>
+    List of Messages: <br />
+    @foreach (Location place in Model)
+    {
+       <p style="align-content:center"> <a href="@place.Link">@place.Name; </a></p> <br />
+        @place.Description; <br />
+        
+        //<a asp-action="Comment">Add a Comment or Review</a> <br />
+        <br />
+    }
+    <br>
+    @*<a href="ContactPage">Add a new message</a><br />*@
+    <a href="/Home/Index">Home</a>
 </body>
 </html>
