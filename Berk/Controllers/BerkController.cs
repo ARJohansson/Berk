@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+    * Author: Ashley Johansson
+    * Date Created: 10/17/19 4:00 PM
+    * Date Updated: 10/17/19  6:37 AM
+    * A Controller for Berk Related Views
+    * such as Information, Loccation, and VIP pages
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

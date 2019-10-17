@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+    * Author: Ashley Johansson
+    * Date Created: 10/17/19 4:00 PM
+    * Date Updated: 10/17/19  6:37 AM
+    * A Controller for Message Related Views
+    * such as Messages, MessageAdmin, MessageBoard
+    * and ContactPage
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
