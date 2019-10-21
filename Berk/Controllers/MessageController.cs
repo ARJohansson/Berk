@@ -41,15 +41,19 @@ namespace Berk.Controllers
         {
             return View("MessageBoard", sent);
         }
-        
+        public IActionResult MessageBoard(DateTime sent)
+        {
+            return View("MessageBoard", sent);
+        }
+
         [HttpPost]
         public RedirectToActionResult MessageBoard(string memberName, string messageText,
                                                         DateTime sent)
         {
-            message = new Message { Sent = sent };
-            message.MemberName = memberName;
-            message.MessageText = messageText;
-            MessageRepository.AddMessage(message);
+            Message m2 = new Message { Sent = sent };
+            m2.MemberName = memberName;
+            m2.MessageText = messageText;
+            MessageRepository.AddMessage(m2);
 
             return RedirectToAction("MessageAdmin");
         }
@@ -85,7 +89,7 @@ namespace Berk.Controllers
         {
             List<Message> messages = MessageRepository.Messages;
             messages.Sort((m1, m2) => DateTime.Compare(m1.Sent, m2.Sent));
-            return View(messages);
+            return View("MessageAdmin", messages);
         }
     }
 }
