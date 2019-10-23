@@ -39,8 +39,9 @@ namespace Berk.Controllers
         // the Index for the MessageController
         public IActionResult Index(DateTime sent)
         {
-            return View("MessageBoard", sent);
+            return View("Messages", sent);
         }
+
         public IActionResult MessageBoard(DateTime sent)
         {
             return View("MessageBoard", sent);
@@ -53,7 +54,7 @@ namespace Berk.Controllers
             Message m2 = new Message { Sent = sent };
             m2.MemberName = memberName;
             m2.MessageText = messageText;
-            MessageRepository.AddMessage(m2);
+            AdminMessageRepository.AddMessage(m2);
 
             return RedirectToAction("MessageAdmin");
         }
@@ -81,14 +82,14 @@ namespace Berk.Controllers
         public IActionResult Messages()
         {
             List<Message> messages = MessageRepository.Messages;
-            messages.Sort((m1, m2) => DateTime.Compare(m1.Sent, m2.Sent));
+            messages.Sort((m1, m2) => (m1.Sent.CompareTo(m2.Sent)));
             return View(messages);
         }
 
         public IActionResult MessageAdmin()
         {
-            List<Message> messages = MessageRepository.Messages;
-            messages.Sort((m1, m2) => DateTime.Compare(m1.Sent, m2.Sent));
+            List<Message> messages = AdminMessageRepository.Messages;
+            messages.Sort((m1, m2) => (m1.Sent.CompareTo(m2.Sent)));
             return View("MessageAdmin", messages);
         }
     }

@@ -1,5 +1,4 @@
-﻿
-@*
+﻿@*
     * Author: Ashley Johansson
     * Date Created: 10/12/19 6:43 PM
     * Date Updated: 10/12/19  6:45 PM
@@ -7,10 +6,11 @@
     * communicate with one another.
 *@
 
+@model DateTime
+
 @{
     Layout = null;
 }
-@model DateTime
 <!DOCTYPE html>
 
 <html>
@@ -24,7 +24,7 @@
         <label for="memberName">Member</label>
         <input name="memberName" /><br />
         <label for="messageText">MessageText</label> <br />
-        <textarea name="messageText" rows="5"cols="25"></textarea>
+        <textarea name="messageText" rows="5" cols="25"></textarea>
         <input type="submit" value="Enter" />
     </form>
     <a href="Messages">List of Messages</a>

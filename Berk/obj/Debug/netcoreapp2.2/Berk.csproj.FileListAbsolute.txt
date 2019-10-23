@@ -108,3 +108,4 @@ C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\ob
 C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Razor\Views\Berk\Info.g.cshtml.cs
 C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Razor\Views\Home\History.g.cshtml.cs
 C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Razor\Views\Message\MessageAdmin.g.cshtml.cs
+C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Berk\Berk\obj\Debug\netcoreapp2.2\Razor\Views\Berk\AddComment.g.cshtml.cs
