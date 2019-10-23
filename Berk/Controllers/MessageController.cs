@@ -42,16 +42,17 @@ namespace Berk.Controllers
             return View("Messages", sent);
         }
 
-        public IActionResult MessageBoard(DateTime sent)
+        public IActionResult MessageBoard(DateTime sent, string name)
         {
-            return View("MessageBoard", sent);
+            return View("MessageBoard", HttpUtility.HtmlDecode(name));
         }
 
         [HttpPost]
-        public RedirectToActionResult MessageBoard(string memberName, string messageText,
-                                                        DateTime sent)
+        public RedirectToActionResult MessageBoard(string memberName, string messageText, 
+                                                    DateTime sent)
         {
             Message m2 = new Message { Sent = sent };
+            //Message m2 = AdminMessageRepository.GetMessageByTime(sent);
             m2.MemberName = memberName;
             m2.MessageText = messageText;
             AdminMessageRepository.AddMessage(m2);

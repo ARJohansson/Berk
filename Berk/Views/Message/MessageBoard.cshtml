@@ -5,7 +5,7 @@
     * A message board where community members can
     * communicate with site administrators.
 *@
-@model DateTime
+@model String
 @{
     Layout = null;
 }
@@ -18,7 +18,7 @@
     <title>MessageBoard</title>
 </head>
 <body>
-    <p>Message administrators of Berk with any questions or suggestions.</p>
+    <h3>Reply to <em> @Model</em></h3>
     <form method="post">
         <label for="memberName">Member</label>
         <input name="memberName" /> <br />
