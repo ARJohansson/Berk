@@ -21,15 +21,25 @@
     List of Locations: <br />
     @foreach (Location place in Model)
     {
-       <p style="align-content:center"> <a href="@place.Link">@place.Name; </a></p> <br />
+        <p style="align-content:center"> <a href="@place.Link">@place.Name; </a></p> <br />
         @place.Description; <br />
-        
-        //<a asp-action="Comment">Add a Comment or Review</a> <br />
+        @if (place.Commments.Count > 0)
+        {
+            <h4>Comments/Reviews</h4>
+            @foreach (Comment c in place.Commments)
+            {
+                <p> @c.Sender : @c.CommentText</p>
+                 <br />
+
+            }
+        }
+        <br />
+        <a asp-action="AddComment" asp-route-place="@place.Name">Add a Comment or Review</a> <br />
         <br />
     }
     <br />
     @*<a href="ContactPage">Add a new message</a><br />*@
-    <a href="/Index">For more information!</a> <br/>
+    <a href="Info">For more information!</a> <br />
     <a href="/Home/Index">Home</a>
 </body>
 </html>

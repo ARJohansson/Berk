@@ -22,10 +22,12 @@
     <form method="post">
         <label for="memberName">Member</label>
         <input name="memberName" /> <br />
-        <label for="messageText">Message</label>
+        <label for="messageText">Message</label> <br />
         <textarea name="messageText" rows="5" cols="25"></textarea>
-        <input type="submit" value="Enter" />
+        <input type="submit" value="Enter"/> <!--asp-route-sent="@*System.DateTime.Now.ToString()*@"/> <br /> -->
+        <!--It is @*System.DateTime.Now.ToString()*@ <br /> -->
     </form>
+    <br />
     <a href="MessageAdmin">List of messages to Admin</a> <br />
     <a href="ContactPage">Or contact other Members!</a> <br />
     <a href="/Home/Index">Back to Home</a>

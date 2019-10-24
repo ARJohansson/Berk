@@ -21,7 +21,7 @@
     {
         @message.MemberName; <br />
         @message.MessageText; <br />
-        @message.Sent;
+        @*@message.Sent;*@
         <a asp-action="MessageBoard" asp-route-sent="@message.Sent"
            asp-route-name="@message.MemberName">Reply</a> <br />
         <br />

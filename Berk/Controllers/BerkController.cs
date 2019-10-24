@@ -24,6 +24,12 @@ namespace Berk.Controllers
             return View("Info");
         }
 
+        // Returns the view from the Info View Page
+        public IActionResult Info()
+        {
+            return View("Info");
+        }
+
         // Returns the view from the Locations View Page
         public IActionResult Locations()
         {
@@ -38,6 +44,26 @@ namespace Berk.Controllers
             List<VIP> people = PeopleRepository.VIPs;
             people.Sort((vip1, vip2) => string.Compare(vip1.Name, vip2.Name, StringComparison.Ordinal));
             return View(people);
+        }
+
+        public IActionResult AddComment(string place)
+        {
+            return View("AddComment", HttpUtility.HtmlDecode(place));
+        }
+
+        [HttpPost]
+        public RedirectToActionResult AddComment(string place, 
+                                                 string memberName,
+                                                 string commentText)
+        {
+            Location location = LocationRepository.GetLocationByName(place);
+            location.Commments.Add(new Comment()
+            {
+                Sender = memberName,
+                MemberName = new Member() { Name = memberName },
+                CommentText = commentText
+            });
+            return RedirectToAction("Locations");
         }
     }
 }
