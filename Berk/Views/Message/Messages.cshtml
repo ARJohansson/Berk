@@ -5,21 +5,20 @@
     * A list of messages sent and received
 *@
 @model List<Message>
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Messages</title>
-</head>
+
+@{
+    ViewData["Title"] = "Message Community Members";
+}
 <body>
-    List of Messages: <br />
+    <h2>Message your friends and fellow community members.</h2>
+    <h3>Site Stats:</h3>
+    <h4>Most recent message was from: <i>@ViewData["recentMessage"]</i></h4>
+    <h4>Number of messages so far: @ViewBag.messageCount</h4>
+    <h2>List of Messages: </h2><br />
     @foreach (Message message in Model)
     {
-        @message.MemberName; <br />
+        <em>@message.MemberName </em>;<br />
         @message.MessageText; <br />
         <a asp-action="ContactPage" asp-route-sent="@message.Sent">Reply</a> <br />
         <br />
@@ -29,4 +28,3 @@
     <a href="MessageAdmin">Message an Admin</a> <br />
     <a href="/Home/Index">Home</a>
 </body>
-</html>

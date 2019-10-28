@@ -7,30 +7,24 @@
     * which detail the relevance of the listings.
 *@
 @model List<Location>
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Locations</title>
-</head>
+@{
+    List<Location> places = LocationRepository.Locations;
+    ViewBag.placeCount = places.Count;
+    ViewData["Title"] = "Locations";
+}
 <body>
-    List of Locations: <br />
+    <h1>List of Locations: </h1>
     @foreach (Location place in Model)
     {
-        <p style="align-content:center"> <a href="@place.Link">@place.Name; </a></p> <br />
+        <h3> <a href="@place.Link">@place.Name; </a></h3>
         @place.Description; <br />
         @if (place.Commments.Count > 0)
         {
             <h4>Comments/Reviews</h4>
             @foreach (Comment c in place.Commments)
             {
-                <p> @c.Sender : @c.CommentText</p>
-                 <br />
-
+                <p> <em>@c.Sender</em>: @c.CommentText</p>
             }
         }
         <br />
@@ -42,4 +36,3 @@
     <a href="Info">For more information!</a> <br />
     <a href="/Home/Index">Home</a>
 </body>
-</html>

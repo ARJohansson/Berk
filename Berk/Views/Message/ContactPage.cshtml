@@ -8,25 +8,18 @@
 
 @model DateTime
 
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ContactPage</title>
-</head>
+@{
+    ViewData["Title"] = "Contact Page";
+}
 <body>
     <p>Message other members of Berk instantly! It's faster than d-mail!</p>
-    <form method="post">
+    <form asp-controller="Message" method="post">
         <label for="memberName">Member</label>
-        <input name="memberName" /><br />
-        <label for="messageText">MessageText</label> <br />
-        <textarea name="messageText" rows="5" cols="25"></textarea>
+        <input name="memberName" /><br /> <br />
+        <label for="messageText">MessageText</label>
+        <textarea name="messageText" rows="3" cols="100"></textarea>
         <input type="submit" value="Enter" />
     </form>
     <a href="Messages">List of Messages</a>
 </body>
-</html>

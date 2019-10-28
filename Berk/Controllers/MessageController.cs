@@ -83,7 +83,10 @@ namespace Berk.Controllers
         public IActionResult Messages()
         {
             List<Message> messages = MessageRepository.Messages;
+
             messages.Sort((m1, m2) => (m1.Sent.CompareTo(m2.Sent)));
+            ViewData["recentMessage"] = messages[messages.Count - 1].MemberName;
+            ViewBag.messageCount = messages.Count;
             return View(messages);
         }
 

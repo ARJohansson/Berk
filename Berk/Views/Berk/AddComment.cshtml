@@ -1,22 +1,15 @@
 ﻿@model String
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Add a Comment</title>
-</head>
+@{
+    ViewData["Title"] = "Add a Comment";
+}
 <body>
-    <h2>You are commenting on <em> @Model</em></h2>
-    <form method="post">
+    <h2>You are commenting on <em style="font-style:italic"> @Model</em></h2>
+    <form asp-rout-place="Model" method="post">
         <label for="memberName">Member</label>
-        <input name="memberName" /> <br />
-        <label for="commentText">Message</label> <br />
-        <textarea name="commentText" rows="5" cols="25"></textarea>
-        <input type="submit" value="Enter" /> 
+        <input name="memberName" /> <br /> <br />
+        <label for="commentText">Message</label>
+        <textarea name="commentText" rows="3" cols="100"></textarea>
+        <input type="submit" value="Enter" />
     </form>
 </body>
-</html>

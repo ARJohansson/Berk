@@ -4,26 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Berk</title>
-
+    <link href="~/css/Berk.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <header>
-        
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @RenderBody()
+    @if (ViewData["Title"].ToString() == "VIPs")
+    {
+        <p>The number of VIPs so far: @ViewBag.peopleCount</p>
+    }
+    @if (ViewData["Title"].ToString() == "Locations")
+    {
+        <p>The number of locations so far: @ViewBag.placeCount</p>
+    }
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - Berk - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @RenderSection("Scripts", required: false)
 </body>
 </html>

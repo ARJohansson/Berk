@@ -6,24 +6,18 @@
     * communicate with site administrators.
 *@
 @model String
+
+
 @{
-    Layout = null;
+    ViewData["Title"] = "Message an Admin";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>MessageBoard</title>
-</head>
 <body>
     <h3>Reply to <em> @Model</em></h3>
-    <form method="post">
+    <form asp-route="MessageAdmin" method="post">
         <label for="memberName">Member</label>
-        <input name="memberName" /> <br />
-        <label for="messageText">Message</label> <br />
-        <textarea name="messageText" rows="5" cols="25"></textarea>
+        <input name="memberName" /> <br /> <br />
+        <label for="messageText">Message</label>
+        <textarea name="messageText" rows="3" cols="100"></textarea>
         <input type="submit" value="Enter"/> <!--asp-route-sent="@*System.DateTime.Now.ToString()*@"/> <br /> -->
         <!--It is @*System.DateTime.Now.ToString()*@ <br /> -->
     </form>
@@ -32,4 +26,3 @@
     <a href="ContactPage">Or contact other Members!</a> <br />
     <a href="/Home/Index">Back to Home</a>
 </body>
-</html>

@@ -3,33 +3,30 @@
     * Date Created: 10/04/19 10:21 AM
     * Date Updated: 10/06/19  4:19 PM
     * A View Page that contains a list of some of
-    * the most important people within the Berk 
+    * the most important people within the Berk
     * community. Including pictues and brief descriptions,
     * possibly even links to further information.
 *@
 @model List<VIP>
+
 @{
-    Layout = null;
+    List<VIP> people = PeopleRepository.VIPs;
+    ViewBag.peopleCount = people.Count;
+    ViewData["Title"] = "VIPs";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>VIPs</title>
-</head>
 <body>
-   <h2 style="align-content:center" >List of Berk's most important people:</h2>
+    <h1>List of Berk's most important people:</h1>
     @foreach (VIP person in Model)
     {
-        <h3 style="align-content:center"><a href="@person.Link">@person.Name</a></h3>
+        <h3><a href="@person.Link">@person.Name</a></h3>
         @person.Reason; <br />
-        @if (person.IsAlive == false) {
+        @if (person.IsAlive == false)
+        {
             <p>Status: @person.Dead;</p>
-        } 
-        @if (person.IsAlive == true){ 
-            <p> Status: @person.Alive;</p> 
+        }
+        @if (person.IsAlive == true)
+        {
+            <p> Status: @person.Alive;</p>
         }
         <br />
     }
@@ -38,4 +35,3 @@
     <a href="/Home/Index">Home</a>
 
 </body>
-</html>
