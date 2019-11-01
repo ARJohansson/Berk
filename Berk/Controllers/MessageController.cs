@@ -61,9 +61,9 @@ namespace Berk.Controllers
         }
 
         // Returns the view from the ContactPage View
-        public IActionResult ContactPage(DateTime sent)
+        public IActionResult ContactPage(DateTime sent, string name)
         {
-            return View("ContactPage", sent);
+            return View("ContactPage", HttpUtility.HtmlDecode(name));
         }
 
         // Posts the message from the ContactPage form into the Message page
@@ -84,8 +84,8 @@ namespace Berk.Controllers
         {
             List<Message> messages = MessageRepository.Messages;
 
-            messages.Sort((m1, m2) => (m1.Sent.CompareTo(m2.Sent)));
             ViewData["recentMessage"] = messages[messages.Count - 1].MemberName;
+            messages.Sort((m1, m2) => (m1.Sent.CompareTo(m2.Sent)));
             ViewBag.messageCount = messages.Count;
             return View(messages);
         }

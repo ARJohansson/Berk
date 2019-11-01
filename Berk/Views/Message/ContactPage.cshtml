@@ -6,18 +6,19 @@
     * communicate with one another.
 *@
 
-@model DateTime
+@model String
 
 
 @{
     ViewData["Title"] = "Contact Page";
 }
 <body>
+    <h3>Reply to <em> @Model</em></h3>
     <p>Message other members of Berk instantly! It's faster than d-mail!</p>
-    <form asp-controller="Message" method="post">
+    <form asp-controller="Message" asp-action="post" method="post">
         <label for="memberName">Member</label>
         <input name="memberName" /><br /> <br />
-        <label for="messageText">MessageText</label>
+        <label for="messageText">Message</label>
         <textarea name="messageText" rows="3" cols="100"></textarea>
         <input type="submit" value="Enter" />
     </form>

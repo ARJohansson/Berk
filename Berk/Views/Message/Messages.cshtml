@@ -20,7 +20,8 @@
     {
         <em>@message.MemberName </em>;<br />
         @message.MessageText; <br />
-        <a asp-action="ContactPage" asp-route-sent="@message.Sent">Reply</a> <br />
+        <a asp-action="ContactPage" asp-route-sent="@message.Sent"
+            asp-route-name="@message.MemberName">Reply</a> <br />
         <br />
     }
     <br>
