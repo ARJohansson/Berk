@@ -1,4 +1,31 @@
-﻿
+﻿@*
+    * Author: Ashley Johansson
+    * Date Created: 10/12/19 6:43 PM
+    * Date Updated: 11/21/19  2:14 PM
+    * A list of messages sent and received
+*@
+@model List<Message>
+
+
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Message Community Members";
 }
+<body>
+    <h2>Message your friends and fellow community members.</h2>
+    <h3>Site Stats:</h3>
+    <h4>Most recent message was from: <i>@ViewData["recentMessage"]</i></h4>
+    <h4>Number of messages so far: @ViewBag.messageCount</h4>
+    <h2>List of Messages: </h2><br />
+    @foreach (Berk.Models.Message message in Model)
+    {
+        <em>@message.MemberName </em>;<br />
+        @message.MessageText; <br />
+        <a asp-action="ContactPage" asp-route-sent="@message.Sent"
+           asp-route-name="@message.MemberName">Reply</a> <br />
+        <br />
+    }
+    <br>
+    <a href="/Message/ContactPage">Add a new message</a><br />
+    <a href="/Message/MessageAdmin">Message an Admin</a> <br />
+    <a href="/Home/Index">Home</a>
+</body>

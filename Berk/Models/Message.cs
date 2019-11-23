@@ -10,7 +10,7 @@ namespace Berk.Models
         public int MessageID { get; set; }
         private Member member = new Member();
 
-        // public string Sender { get; set; }
+        //public string Sender { get; set; }
         public string MessageText { get; set; }
         public DateTime Sent { get; set; }
         public string MemberName { get; set; }

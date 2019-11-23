@@ -10,8 +10,9 @@
 @model List<VIP>
 
 @{
-    List<VIP> people = PeopleRepository.VIPs;
-    ViewBag.peopleCount = people.Count;
+    Berk.Repositories.PeopleRepository people = new Berk.Repositories.PeopleRepository();
+    //List<VIP> people = Berk.Repositories.PeopleRepository.VIPs;
+    ViewBag.peopleCount = people.VIPs.Count;
     ViewData["Title"] = "VIPs";
 }
 <body>

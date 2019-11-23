@@ -2,32 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Berk.Models;
 
-namespace Berk.Models
+namespace Berk.Repositories
 {
-    public class PeopleRepository
+    public class FakePeopleRepository : IPeopleRepository
     {
         private static List<VIP> people = new List<VIP>();
 
-        public static List<VIP> VIPs { get { return people; } }
+        public List<VIP> VIPs { get { return people; } }
 
-        static PeopleRepository()
+        public FakePeopleRepository()
         {
             AddPeopleInfo();
         }
 
-        public static void AddPeople(VIP vip)
+        public void AddPeople(VIP vip)
         {
             people.Add(vip);
         }
 
-        public static VIP GetPersonByName(string name)
+        public VIP GetPersonByName(string name)
         {
             VIP vip = people.Find(p => p.Name == name);
             return vip;
         }
 
-        static void AddPeopleInfo()
+        public void AddPeopleInfo()
         {
             VIP person = new VIP()
             {

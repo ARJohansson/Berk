@@ -9,8 +9,9 @@
 @model List<Location>
 
 @{
-    List<Location> places = LocationRepository.Locations;
-    ViewBag.placeCount = places.Count;
+    Berk.Repositories.LocationRepository places = new Berk.Repositories.LocationRepository();
+    //List<Location> places = Berk.Repositories.LocationRepository.Locations;
+    ViewBag.placeCount = places.Locations.Count;
     ViewData["Title"] = "Locations";
 }
 <body>

@@ -2,32 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Berk.Models;
 
-namespace Berk.Models
+namespace Berk.Repositories
 {
-    public class LocationRepository
+    public class LocationRepository : ILocationRepository
     {
         private static List<Location> locations = new List<Location>();
 
-        public static List<Location> Locations { get { return locations; } }
-
-        static LocationRepository()
-        {
-            AddLocationData();
-        }
-
-        public static void AddLocation(Location place)
+        public List<Location> Locations { get { return locations; } }
+        
+        public void AddLocation(Location place)
         {
             locations.Add(place);
         }
 
-        public static Location GetLocationByName(String name)
+        public Location GetLocationByName(String name)
         {
             Location location = locations.Find(l => l.Name == name);
             return location;
         }
 
-        static void AddLocationData()
+        public void AddLocationData()
         {
             Location place = new Location()
             {

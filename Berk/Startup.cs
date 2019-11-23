@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Berk.Repositories;
 
 namespace Berk
 {
@@ -32,6 +33,12 @@ namespace Berk
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //Dependency Injection
+            services.AddTransient<IMessageRepository, MessageRepository>();
+            services.AddTransient<IAdminMessageRepository, AdminMessageRepository>();
+            services.AddTransient<ILocationRepository, LocationRepository>();
+            services.AddTransient<IPeopleRepository, PeopleRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

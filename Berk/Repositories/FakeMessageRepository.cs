@@ -2,46 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Berk.Models;
 
-namespace Berk.Models
+namespace Berk.Repositories
 {
-    // Temp class to store messages and for testing purposes
-    public static class MessageRepository
+    public class FakeMessageRepository : IMessageRepository
     {
-        private static List<Message> messages = new List<Message>();
+        private List<Message> messages = new List<Message>();
 
-        public static List<Message> Messages { get { return messages; } }
-        
-        static MessageRepository()
+        public List<Message> Messages { get { return messages; } }
+
+        public FakeMessageRepository()
         {
             AddTestData();
         }
 
-        public static void AddMessage(Message message)
+        public void AddMessage(Message message)
         {
             messages.Add(message);
         }
 
-        public static Message GetMessageBySender(String name)
+        public Message GetMessageBySender(String name)
         {
             Message message = messages.Find(m => m.MemberName == name);
             return message;
         }
 
-        public static Message GetMessageByTime(DateTime sent)
+        public Message GetMessageByTime(DateTime sent)
         {
             Message message = messages.Find(m => m.Sent == sent);
             return message;
         }
 
-        static void AddTestData()
+        public void AddTestData()
         {
+            Member member = new Member();
             Message message = new Message()
             {
                 MemberName = "Lisa Beau",
                 MessageText = "Welcome to Berk!",
                 Sent = new DateTime(2019, 10, 16, 10, 45, 32)
             };
+            member.Name = message.MemberName;
+            member.Messages.Add(message);
             messages.Add(message);
 
             message = new Message()
@@ -50,6 +53,8 @@ namespace Berk.Models
                 MessageText = "If you have any questions, feel free to contact us!",
                 Sent = new DateTime(2019, 10, 16, 11, 00, 12)
             };
+            member.Name = message.MemberName;
+            member.Messages.Add(message);
             messages.Add(message);
 
             message = new Message()
@@ -58,17 +63,9 @@ namespace Berk.Models
                 MessageText = "This is Berk's new website.",
                 Sent = new DateTime(2019, 10, 16, 8, 00, 42)
             };
+            member.Name = message.MemberName;
+            member.Messages.Add(message);
             messages.Add(message);
         }
-        
-        /*public static void ContactPage(Message message)
-        {
-            messages.Add(message);
-        }
-
-        public static void MessageBoard(Message message)
-        {
-            messages.Add(message);
-        }*/
     }
 }

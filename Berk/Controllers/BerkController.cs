@@ -1,10 +1,11 @@
 ﻿/*
     * Author: Ashley Johansson
     * Date Created: 10/17/19 4:00 PM
-    * Date Updated: 10/17/19  6:37 AM
+    * Date Updated: 11/21/19  1:54 PM
     * A Controller for Berk Related Views
     * such as Information, Loccation, and VIP pages
 */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,31 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Web;
 using Berk.Models;
+using Berk.Repositories;
 
 namespace Berk.Controllers
 {
     public class BerkController : Controller
     {
+        ILocationRepository lRepo;
+        IPeopleRepository pRepo;
+        public BerkController(ILocationRepository lR, IPeopleRepository pR)
+        {
+            lRepo = lR;
+            pRepo = pR;
+            if (lRepo.Locations.Count == 0)
+            {
+                lRepo.AddLocationData();
+            }
+            else
+                lRepo = lR;
+            if (pRepo.VIPs.Count == 0)
+            {
+                pRepo.AddPeopleInfo();
+            }
+            else
+                pRepo = pR;
+        }
         //Returns the view from the History View Page, this is the
         // Index for the BerkController
         public IActionResult Index()
@@ -33,7 +54,7 @@ namespace Berk.Controllers
         // Returns the view from the Locations View Page
         public IActionResult Locations()
         {
-            List<Location> locations = LocationRepository.Locations;
+            List<Location> locations = lRepo.Locations;
             locations.Sort((pl1, pl2) => string.Compare( pl1.Name, pl2.Name, StringComparison.Ordinal));
             return View(locations);
         }
@@ -41,7 +62,7 @@ namespace Berk.Controllers
         // Returns the view from the VIP View Page
         public IActionResult VIP()
         {
-            List<VIP> people = PeopleRepository.VIPs;
+            List<VIP> people = pRepo.VIPs;
             people.Sort((vip1, vip2) => string.Compare(vip1.Name, vip2.Name, StringComparison.Ordinal));
             return View(people);
         }
@@ -56,7 +77,7 @@ namespace Berk.Controllers
                                                  string memberName,
                                                  string commentText)
         {
-            Location location = LocationRepository.GetLocationByName(place);
+            Location location = lRepo.GetLocationByName(place);
             location.Commments.Add(new Comment()
             {
                 Sender = memberName,
