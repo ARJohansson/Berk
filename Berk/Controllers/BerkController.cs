@@ -25,18 +25,6 @@ namespace Berk.Controllers
         {
             lRepo = lR;
             pRepo = pR;
-            if (lRepo.Locations.Count == 0)
-            {
-                lRepo = new FakeLocationRepository();
-            }
-            else
-                lRepo = lR;
-            if (pRepo.VIPs.Count == 0)
-            {
-                pRepo = new FakePeopleRepository();
-            }
-            else
-                pRepo = pR;
         }
         //Returns the view from the History View Page, this is the
         // Index for the BerkController
