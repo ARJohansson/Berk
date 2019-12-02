@@ -8,11 +8,11 @@
     * possibly even links to further information.
 *@
 @model List<VIP>
+@* Berk.Repositories.PeopleRepository people = new Berk.Repositories.PeopleRepository();
+    List<VIP> people = Berk.Repositories.PeopleRepository.VIPs;
+    ViewBag.peopleCount = people.VIPs.Count;*@
 
-@{
-    Berk.Repositories.PeopleRepository people = new Berk.Repositories.PeopleRepository();
-    //List<VIP> people = Berk.Repositories.PeopleRepository.VIPs;
-    ViewBag.peopleCount = people.VIPs.Count;
+@{ 
     ViewData["Title"] = "VIPs";
 }
 <body>

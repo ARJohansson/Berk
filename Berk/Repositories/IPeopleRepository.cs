@@ -10,7 +10,6 @@ namespace Berk.Repositories
     {
         List<VIP> VIPs { get; }
         void AddPeople(VIP vip);
-        void AddPeopleInfo();
         VIP GetPersonByName(string name);
     }
 }

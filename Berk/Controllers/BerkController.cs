@@ -27,13 +27,13 @@ namespace Berk.Controllers
             pRepo = pR;
             if (lRepo.Locations.Count == 0)
             {
-                lRepo.AddLocationData();
+                lRepo = new FakeLocationRepository();
             }
             else
                 lRepo = lR;
             if (pRepo.VIPs.Count == 0)
             {
-                pRepo.AddPeopleInfo();
+                pRepo = new FakePeopleRepository();
             }
             else
                 pRepo = pR;

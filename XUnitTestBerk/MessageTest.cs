@@ -63,7 +63,7 @@ namespace XUnitTestBerk
         {
             // Arrange
             var mRepo = new FakeMessageRepository();
-            var controller = new MessageController(mRepo, new AdminMessageRepository());
+            var controller = new MessageController(mRepo, new FakeAdminMessageRepository());
 
             // Act
             mRepo.AddTestData();

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Ashley Johansson\Documents\Lanecc\CS295N\BerkCommunityPage\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="berkConnectionString">
+      <Value>Data Source=SQL5047.site4now.net%3bInitialCatalog=DB_A4F6F8_BerkDB%3bUserId=DB_A4F6F8_BerkDB_admin%3bPassword=databasingWORKS1%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Berk.Repositories.AppDbContext">
+      <Value>Data Source=SQL5047.site4now.net%3bInitialCatalog=DB_A4F6F8_BerkDB%3bUserId=DB_A4F6F8_BerkDB_admin%3bPassword=databasingWORKS1%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

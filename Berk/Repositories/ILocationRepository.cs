@@ -10,7 +10,6 @@ namespace Berk.Repositories
     {
         List<Location> Locations { get; }
         void AddLocation(Location place);
-        void AddLocationData();
         Location GetLocationByName(String name);
 
     }

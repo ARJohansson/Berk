@@ -7,11 +7,11 @@
     * which detail the relevance of the listings.
 *@
 @model List<Location>
-
-@{
-    Berk.Repositories.LocationRepository places = new Berk.Repositories.LocationRepository();
+@*Berk.Repositories.LocationRepository places = new Berk.Repositories.LocationRepository();
     //List<Location> places = Berk.Repositories.LocationRepository.Locations;
-    ViewBag.placeCount = places.Locations.Count;
+    ViewBag.placeCount = places.Locations.Count;*@
+
+@{ 
     ViewData["Title"] = "Locations";
 }
 <body>

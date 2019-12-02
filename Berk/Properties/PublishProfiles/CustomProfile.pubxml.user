@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://ftp.site4now.net/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>11/27/2019 11:05:49</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>11/30/2019 19:57:50</publishTime>
+    </File>
+    <File Include="appsettings.Production.json">
+      <publishTime>11/30/2019 21:58:22</publishTime>
+    </File>
+    <File Include="Berk.deps.json">
+      <publishTime>11/30/2019 21:58:22</publishTime>
+    </File>
+    <File Include="Berk.pdb">
+      <publishTime>11/30/2019 21:58:07</publishTime>
+    </File>
+    <File Include="Berk.runtimeconfig.json">
+      <publishTime>11/30/2019 21:58:22</publishTime>
+    </File>
+    <File Include="Berk.Views.pdb">
+      <publishTime>11/30/2019 21:58:08</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>03/02/2019 19:52:30</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>10/01/2019 13:40:52</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>10/01/2019 13:40:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>03/02/2019 19:51:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>03/02/2019 19:52:00</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>03/02/2019 19:52:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>03/02/2019 19:52:02</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>03/02/2019 19:51:58</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>03/02/2019 19:51:56</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>03/02/2019 19:52:04</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>10/01/2019 13:40:45</publishTime>
+    </File>
+    <File Include="Publish/appsettings.Development.json">
+      <publishTime>10/04/2019 10:13:10</publishTime>
+    </File>
+    <File Include="Publish/appsettings.json">
+      <publishTime>10/04/2019 10:13:10</publishTime>
+    </File>
+    <File Include="Publish/Berk.deps.json">
+      <publishTime>11/01/2019 18:18:01</publishTime>
+    </File>
+    <File Include="Publish/Berk.runtimeconfig.json">
+      <publishTime>11/01/2019 18:18:01</publishTime>
+    </File>
+    <File Include="Publish/web.config">
+      <publishTime>11/01/2019 18:18:01</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>10/01/2019 13:40:49</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>10/01/2019 13:40:50</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>10/01/2019 13:40:52</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>10/01/2019 13:40:52</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>10/01/2019 13:40:52</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>11/30/2019 21:58:22</publishTime>
+    </File>
+    <File Include="wwwroot/css/Berk.css">
+      <publishTime>10/27/2019 22:33:30</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>10/04/2019 10:13:11</publishTime>
+    </File>
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="berkConnectionString">
+      <Value>Data Source=SQL5047.site4now.net%3bInitialCatalog=DB_A4F6F8_BerkDB%3bUserId=DB_A4F6F8_BerkDB_admin%3bPassword=databasingWORKS1%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Berk.Repositories.AppDbContext">
+      <Value>Data Source=SQL5047.site4now.net%3bInitialCatalog=DB_A4F6F8_BerkDB%3bUserId=DB_A4F6F8_BerkDB_admin%3bPassword=databasingWORKS1%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

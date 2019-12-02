@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Berk.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Berk
 {
@@ -39,6 +40,10 @@ namespace Berk
             services.AddTransient<IAdminMessageRepository, AdminMessageRepository>();
             services.AddTransient<ILocationRepository, LocationRepository>();
             services.AddTransient<IPeopleRepository, PeopleRepository>();
+
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
+                Configuration["ConnectionStrings:berkConnectionString"]));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +69,8 @@ namespace Berk
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedData.Seed(app);
         }
 
     }

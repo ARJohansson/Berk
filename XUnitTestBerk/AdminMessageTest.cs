@@ -65,7 +65,7 @@ namespace BerkxUnit.Tests
         {
             // Arrange
             var aRepo = new FakeAdminMessageRepository();
-            var controller = new MessageController(new MessageRepository(), aRepo);
+            var controller = new MessageController(new FakeMessageRepository(), aRepo);
 
             // Act
             aRepo.AddTestData();
