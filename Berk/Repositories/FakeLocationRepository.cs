@@ -22,6 +22,11 @@ namespace Berk.Repositories
             locations.Add(place);
         }
 
+        public void AddComment(Location place, Comment comment)
+        {
+            place.Comments.Add(comment);
+        }
+
         public Location GetLocationByName(String name)
         {
             Location location = locations.Find(l => l.Name == name);
@@ -82,5 +87,6 @@ namespace Berk.Repositories
             };
             locations.Add(place);
         }
+
     }
 }

@@ -12,7 +12,7 @@ namespace Berk.Repositories
         private AppDbContext context;
         private static List<Location> locations = new List<Location>();
 
-        public List<Location> Locations { get { return context.Locations.ToList(); } }
+        public List<Location> Locations { get { return context.Locations.Include("Comments").ToList(); } }
         
         public LocationRepository(AppDbContext appDbContext)
         {
@@ -22,6 +22,13 @@ namespace Berk.Repositories
         public void AddLocation(Location place)
         {
             context.Locations.Add(place);
+            context.SaveChanges();
+        }
+
+        public void AddComment(Location place, Comment comment)
+        {
+            place.Comments.Add(comment);
+            context.Locations.Update(place);
             context.SaveChanges();
         }
 

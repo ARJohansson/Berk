@@ -21,6 +21,7 @@ namespace Berk.Controllers
     {
         ILocationRepository lRepo;
         IPeopleRepository pRepo;
+        ICommentRepository cRepo;
         public BerkController(ILocationRepository lR, IPeopleRepository pR)
         {
             lRepo = lR;
@@ -66,12 +67,15 @@ namespace Berk.Controllers
                                                  string commentText)
         {
             Location location = lRepo.GetLocationByName(place);
-            location.Commments.Add(new Comment()
-            {
-                Sender = memberName,
-                MemberName = new Member() { Name = memberName },
-                CommentText = commentText
-            });
+
+            Comment comment = new Comment();
+            comment.Sender = memberName;
+            comment.MemberName = new Member() { Name = memberName };
+            comment.CommentText = commentText;
+
+            location.Comments.Add(comment);
+            lRepo.AddComment(location, comment);
+
             return RedirectToAction("Locations");
         }
     }

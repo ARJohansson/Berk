@@ -25,7 +25,7 @@ namespace Berk.Repositories
                     MessageText = "Welcome to Berk!",
                     Sent = new DateTime(2019, 10, 16, 10, 45, 32)
                 };
-                context.Messages.Add(message);
+                context.Add(message);
                 member.Messages.Add(message);
 
                 member = new Member { Name = "Travis Luthern" };
@@ -36,7 +36,7 @@ namespace Berk.Repositories
                     Sent = new DateTime(2019, 10, 16, 11, 00, 12)
                 };
                 member.Messages.Add(message);
-                context.Messages.Add(message);
+                context.Add(message);
 
                 member = new Member { Name = "Ulfric Stormheart" };
                 message = new Message()
@@ -240,7 +240,7 @@ namespace Berk.Repositories
                     Link = "https://howtotrainyourdragon.fandom.com/wiki/Ruffnut_Thorston",
                     IsAlive = true
                 };
-                context.VIPs.Add(person);
+                context.Add(person);
 
                 person = new VIP()
                 {
@@ -252,7 +252,7 @@ namespace Berk.Repositories
                     Link = "https://howtotrainyourdragon.fandom.com/wiki/Tuffnut_Thorston",
                     IsAlive = true
                 };
-                context.VIPs.Add(person);
+                context.Add(person);
                 #endregion
 
                 context.SaveChanges();

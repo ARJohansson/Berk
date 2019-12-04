@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Berk.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191127183755_initial")]
+    [Migration("20191203224911_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

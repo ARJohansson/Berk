@@ -15,7 +15,7 @@ namespace Berk.Models
         public string Description { get; set; }
         public string Link { get; set; }
 
-        public List<Comment> Commments { get { return comments; } }
+        public List<Comment> Comments { get { return comments; } }
 
     }
 }

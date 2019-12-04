@@ -20,10 +20,10 @@
     {
         <h3> <a href="@place.Link">@place.Name; </a></h3>
         @place.Description; <br />
-        @if (place.Commments.Count > 0)
+        @if (place.Comments.Count > 0)
         {
             <h4>Comments/Reviews</h4>
-            @foreach (Comment c in place.Commments)
+            @foreach (Comment c in place.Comments)
             {
                 <p> <em>@c.Sender</em>: @c.CommentText</p>
             }
